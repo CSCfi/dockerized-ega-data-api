@@ -7,6 +7,7 @@ Usage
 Build, run and test the API using Maven, Docker-compose and Openshift::
 
     git clone --recursive https://github.com/CSC-IT-Center-for-Science/dockerized-ega-data-api.git
+    cd dockerized-ega-data-api
     mvn clean install
 
     # Docker-compose
