@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>eu.elixir.ega.docker</groupId>
+    <artifactId>spring-boot-docker-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Dockerized EGA Data API</name>
+
+    <modules>
+        <module>ega-data-api-v3-eureka</module>
+        <module>ega-data-api-v3-config</module>
+	<module>ega-data-api-v3-downloader</module>
+	<module>ega-data-api-v3-res_mvc</module>
+	<module>ega-data-api-v3-dataedge</module>
+	<module>ega-data-api-v3-access</module>
+    </modules>
+
+</project>

@@ -1,0 +1,65 @@
+version: '2.1'
+
+services:
+  config:
+    image: ega-data-api/config
+    depends_on:
+      - eureka
+    ports:
+      - "8888:8888"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/info"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  eureka:
+    image: ega-data-api/eureka 
+    hostname: eureka        
+    ports:
+      - "8761:8761"     
+        
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"        
+    environment:
+      POSTGRES_PASSWORD: docker
+      POSTGRES_USER: docker
+      POSTGRES_DB: ega-downloader-db
+
+  downloader:
+    image: ega-data-api/downloader
+    environment:
+      SPRING_PROFILES_ACTIVE: docker        
+    depends_on:
+      config:
+        condition: service_healthy 
+      db:
+        condition: service_started        
+
+  res:
+    image: ega-data-api/res
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+       config:
+         condition: service_healthy
+
+  dataedge:
+    image: ega-data-api/dataedge
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+       config:
+         condition: service_healthy
+
+  access:
+    image: ega-data-api/access
+    ports: 
+      - "8051:8051"        
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+       config:
+         condition: service_healthy

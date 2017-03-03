@@ -1,0 +1,18 @@
+[submodule "ega-data-api-v3-access"]
+	path = ega-data-api-v3-access
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-access.git
+[submodule "ega-data-api-v3-config"]
+	path = ega-data-api-v3-config
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-config
+[submodule "ega-data-api-v3-dataedge"]
+	path = ega-data-api-v3-dataedge
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-dataedge
+[submodule "ega-data-api-v3-downloader"]
+	path = ega-data-api-v3-downloader
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-downloader
+[submodule "ega-data-api-v3-eureka"]
+	path = ega-data-api-v3-eureka
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-eureka
+[submodule "ega-data-api-v3-res_mvc"]
+	path = ega-data-api-v3-res_mvc
+	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-res_mvc
