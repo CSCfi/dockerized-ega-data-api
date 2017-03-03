@@ -4,6 +4,8 @@ This is a bundle of Docker containers for EGA Access API. Microservices for the 
 
 Usage
 =====
+Build, run and test the API using Maven, Docker-compose and Openshift::
+
     git clone --recursive https://github.com/CSC-IT-Center-for-Science/dockerized-ega-data-api.git
     mvn clean install
 
@@ -16,6 +18,7 @@ Usage
     # Use the API
     curl http://localhost:8051/datasets/
     curl http://localhost:8051/files/
+-----
 
 Known issues
 =====
