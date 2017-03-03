@@ -5,7 +5,7 @@ This is a bundle of Docker containers for EGA Access API. Microservices for the 
 Usage
 =====
 ```
-git clone -r <>
+git clone --recursive https://github.com/CSC-IT-Center-for-Science/dockerized-ega-data-api.git
 mvn clean install
 
 # Docker-compose
