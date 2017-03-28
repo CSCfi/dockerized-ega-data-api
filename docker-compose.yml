@@ -26,10 +26,12 @@ services:
     environment:
       POSTGRES_PASSWORD: docker
       POSTGRES_USER: docker
-      POSTGRES_DB: ega-downloader-db
+      POSTGRES_DB: accounts 
 
   downloader:
     image: ega-data-api/downloader
+    ports:
+      - "9050:9050"
     environment:
       SPRING_PROFILES_ACTIVE: docker        
     depends_on:
@@ -40,6 +42,10 @@ services:
 
   res:
     image: ega-data-api/res
+    ports: 
+      - "9090:9090"
+    volumes:
+      - /data:/data
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
@@ -48,6 +54,8 @@ services:
 
   dataedge:
     image: ega-data-api/dataedge
+    ports:
+      - "8059:8059"        
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
@@ -58,6 +66,26 @@ services:
     image: ega-data-api/access
     ports: 
       - "8051:8051"        
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+       config:
+         condition: service_healthy
+
+  zuul-server:
+    image: ega-data-api/zuul-server
+    ports:
+      - "8686:8686"        
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    depends_on:
+       config: 
+         condition: service_healthy
+
+  key:
+    image: ega-data-api/key
+    ports:
+      - "9094:9094"
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
