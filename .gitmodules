@@ -16,3 +16,6 @@
 [submodule "ega-data-api-v3-res_mvc"]
 	path = ega-data-api-v3-res_mvc
 	url = https://github.com/CSC-IT-Center-for-Science/ega-data-api-v3-res_mvc
+[submodule "ega-data-api-v3-key"]
+	path = ega-data-api-v3-key
+	url = https://github.com/CSCfi/ega-data-api-v3-key.git
