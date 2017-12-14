@@ -17,7 +17,7 @@
 	<module>ega-data-api-v3-res_mvc</module>
 	<module>ega-data-api-v3-dataedge</module>
 	<module>ega-data-api-v3-access</module>
-	<module>ega-data-api-v3-zuul-server</module>
+	<module>ega-data-api-v3-zuul</module>
     </modules>
 
 </project>
