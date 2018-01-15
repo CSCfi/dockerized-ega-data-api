@@ -22,3 +22,6 @@
 [submodule "ega-data-api-v3-zuul"]
 	path = ega-data-api-v3-zuul
 	url = https://github.com/elixir-europe/ega-data-api-v3-zuul
+[submodule "ega-data-api-v3-cipher"]
+	path = ega-data-api-v3-cipher
+	url = https://github.com/elixir-europe/ega-data-api-v3-cipher

@@ -11,13 +11,14 @@
 
     <modules>
         <module>ega-data-api-v3-eureka</module>
-	<module>ega-data-api-v3-config</module>
-	<module>ega-data-api-v3-key</module>
-	<module>ega-data-api-v3-downloader</module>
-	<module>ega-data-api-v3-res_mvc</module>
-	<module>ega-data-api-v3-dataedge</module>
-	<module>ega-data-api-v3-access</module>
-	<module>ega-data-api-v3-zuul</module>
+        <module>ega-data-api-v3-config</module>
+        <module>ega-data-api-v3-key</module>
+        <module>ega-data-api-v3-downloader</module>
+        <module>ega-data-api-v3-res_mvc</module>
+        <module>ega-data-api-v3-dataedge</module>
+        <module>ega-data-api-v3-access</module>
+        <module>ega-data-api-v3-zuul</module>
+        <module>ega-data-api-v3-cipher</module>
     </modules>
 
 </project>
